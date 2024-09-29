@@ -1,0 +1,36 @@
+<div>
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <h4>Interpolation Binding</h4>
+                    <span>{{courseName}}</span>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h4>Property Binding</h4>
+                    <span><input type="text" [value]="courseName"></span>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h4>Event Binding</h4>
+                    <span>
+                        <button (click)="changeCourse()">Change Course</button>
+                    </span>
+                    <span>{{courseName}}</span>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h4>Two Way Binding</h4>
+                    <span>
+                        <input type="text" placeholder="Enter details" [(ngModel)] = "courseName">
+                    </span>
+                    <span>{{courseName}}</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
