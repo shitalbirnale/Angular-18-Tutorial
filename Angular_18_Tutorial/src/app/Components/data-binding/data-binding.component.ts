@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -14,5 +14,12 @@ export class DataBindingComponent {
 
   changeCourse(){
     this.courseName = "React JS";
+  }
+  
+  firstname = signal("Welcome to India");
+
+  changeSignalText()
+  {
+    this.firstname.set("Welcome to USA")
   }
 }
